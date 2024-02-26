@@ -15,7 +15,8 @@ const errorHandler = require("./middleware/error");
 
 // 
 // mongodb+srv://githaigageorge96:pxGA0v9qMFzpr54y@jobportalapi.fxpxqew.mongodb.net/?retryWrites=true&w=majority&appName=jobportalapi
-mongoose.connect(`mongodb+srv://githaigageorge96:pxGA0v9qMFzpr54y@jobportalapi.fxpxqew.mongodb.net/?retryWrites=true&w=majority`, {})
+// `mongodb+srv://githaigageorge96:pxGA0v9qMFzpr54y@jobportalapi.fxpxqew.mongodb.net/?retryWrites=true&w=majority`
+mongoose.connect(process.env.DATABASE, {})
 .then(() => console.log("DB connected"))
 .catch((err) => console.log(err))
 
